@@ -1,1 +1,10 @@
-INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Vitória Caroline', '53385236800', 3000, '2004-02-06', 3);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Maria Aparecida', '23345678700', 2100, '1984-02-05', 1);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Jhonatan Santos', '89934542233', 1500, '2000-02-12', 3);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Renata Gomes', '98876345466', 2100, '1990-12-16', 2);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Bruna Oliveira', '122554446688', 5000, '1975-02-04', 4);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Mario Cardoso', '34465789800', 3000, '1987-02-07', 1);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Gabriel Martins', '32276876543', 7000, '1967-04-12', 4);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Matheus Henrique', '12232456577', 2000, '2002-09-09', 1);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Amanda Rodrigues', '98876254422', 4000, '1980-02-08', 1);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Giovana Silva', '76655432155', 2000, '1992-02-09', 2);
+INSERT INTO tb_cliente (nome, cpf, renda, datanasc, filhos) VALUES ('Esther Gomes', '998722717277', 1500, '2000-07-12', 1);
