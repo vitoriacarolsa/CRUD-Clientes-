@@ -41,4 +41,10 @@ public class ClienteController {
        return ResponseEntity.created(uri).body(dto);
     }
 
+    @PutMapping(value= ("/{id}"))
+    public ResponseEntity <ClienteDTO> update (@PathVariable Long id, @RequestBody ClienteDTO dto) {
+         dto= service.update(id, dto);
+        return ResponseEntity.ok(dto);
+    }
+
 }
