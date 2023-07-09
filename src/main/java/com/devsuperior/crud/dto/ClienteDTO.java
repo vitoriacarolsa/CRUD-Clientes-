@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class ClienteDTO {
     private Long id;
-    private String nome;
+    private String name;
     private String cpf;
     private Double renda;
     private LocalDate datanasc;
@@ -15,9 +15,9 @@ public class ClienteDTO {
     public ClienteDTO(){
     }
 
-    public ClienteDTO(Long id, String nome, String cpf, Double renda, LocalDate datanasc, Integer filhos) {
+    public ClienteDTO(Long id, String name, String cpf, Double renda, LocalDate datanasc, Integer filhos) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.cpf = cpf;
         this.renda = renda;
         this.datanasc = datanasc;
@@ -26,7 +26,7 @@ public class ClienteDTO {
 
     public ClienteDTO(Cliente entity) {
         id = entity.getId();
-        nome = entity.getNome();
+        name = entity.getname();
         cpf = entity.getCpf();
         renda = entity.getRenda();
         datanasc = entity.getDatanasc();
@@ -37,8 +37,8 @@ public class ClienteDTO {
         return id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getname() {
+        return name;
     }
 
     public String getCpf() {

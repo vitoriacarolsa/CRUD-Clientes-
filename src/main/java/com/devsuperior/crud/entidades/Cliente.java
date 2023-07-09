@@ -9,7 +9,7 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
     private String cpf;
     private Double renda;
     private LocalDate datanasc;
@@ -23,12 +23,12 @@ public class Cliente {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getname() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public String getCpf() {
