@@ -1,8 +1,6 @@
 package com.devsuperior.crud.controllers;
 
 import com.devsuperior.crud.dto.ClienteDTO;
-import com.devsuperior.crud.entidades.Cliente;
-import com.devsuperior.crud.repositories.ClienteRepository;
 import com.devsuperior.crud.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,8 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping(value= "/clients")
@@ -45,6 +42,12 @@ public class ClienteController {
     public ResponseEntity <ClienteDTO> update (@PathVariable Long id, @RequestBody ClienteDTO dto) {
          dto= service.update(id, dto);
         return ResponseEntity.ok(dto);
+    }
+
+    @DeleteMapping(value= ("/{id}"))
+    public ResponseEntity <Void> update (@PathVariable Long id) {
+       service.delete(id);
+       return ResponseEntity.noContent().build();
     }
 
 }
