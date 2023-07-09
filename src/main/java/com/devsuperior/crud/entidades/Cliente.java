@@ -11,9 +11,9 @@ public class Cliente {
     private Long id;
     private String name;
     private String cpf;
-    private Double renda;
-    private LocalDate datanasc;
-    private Integer filhos;
+    private Double income;
+    private LocalDate birthDate;
+    private Integer children;
 
     public Long getId() {
         return id;
@@ -39,27 +39,27 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public Double getRenda() {
-        return renda;
+    public Double getincome() {
+        return income;
     }
 
-    public void setRenda(Double renda) {
-        this.renda = renda;
+    public void setincome(Double income) {
+        this.income = income;
     }
 
-    public LocalDate getDatanasc() {
-        return datanasc;
+    public LocalDate getbirthDate() {
+        return birthDate;
     }
 
-    public void setDatanasc(LocalDate datanasc) {
-        this.datanasc = datanasc;
+    public void setbirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
-    public Integer getFilhos() {
-        return filhos;
+    public Integer getchildren() {
+        return children;
     }
 
-    public void setFilhos(Integer filhos) {
-        this.filhos = filhos;
+    public void setchildren(Integer children) {
+        this.children = children;
     }
 }

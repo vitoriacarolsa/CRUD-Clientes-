@@ -54,8 +54,8 @@ public class ClienteService {
     private void copyDtoToEntity(ClienteDTO dto, Cliente entity) {
         entity.setname(dto.getname());
         entity.setCpf(dto.getCpf());
-        entity.setRenda(dto.getRenda());
-        entity.setDatanasc(dto.getDatanasc());
-        entity.setFilhos(dto.getFilhos());
+        entity.setincome(dto.getincome());
+        entity.setbirthDate(dto.getbirthDate());
+        entity.setchildren(dto.getchildren());
     }
 }
