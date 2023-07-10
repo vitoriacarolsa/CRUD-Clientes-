@@ -2,6 +2,7 @@ package com.devsuperior.crud.controllers;
 
 import com.devsuperior.crud.dto.ClienteDTO;
 import com.devsuperior.crud.services.ClienteService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,8 +19,8 @@ public class ClienteController {
    @Autowired
    private ClienteService service;
 
-    @GetMapping(value= ("/{id}"))
-    public ResponseEntity <ClienteDTO> findById (@PathVariable Long id) {
+    @GetMapping (value= "/{id}")
+    public ResponseEntity<ClienteDTO> findById(@PathVariable long id){
         ClienteDTO dto= service.findById(id);
         return ResponseEntity.ok(dto);
     }
@@ -31,7 +32,7 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ResponseEntity <ClienteDTO> insert (@RequestBody ClienteDTO dto) {
+    public ResponseEntity <ClienteDTO> insert (@Valid @RequestBody ClienteDTO dto) {
        dto= service.insert(dto);
        URI uri= ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                .buildAndExpand(dto.getId()).toUri();
@@ -39,13 +40,13 @@ public class ClienteController {
     }
 
     @PutMapping(value= ("/{id}"))
-    public ResponseEntity <ClienteDTO> update (@PathVariable Long id, @RequestBody ClienteDTO dto) {
+    public ResponseEntity <ClienteDTO> update (@PathVariable Long id, @Valid @RequestBody ClienteDTO dto) {
          dto= service.update(id, dto);
         return ResponseEntity.ok(dto);
     }
 
     @DeleteMapping(value= ("/{id}"))
-    public ResponseEntity <Void> update (@PathVariable Long id) {
+    public ResponseEntity <Void> delete (@PathVariable Long id) {
        service.delete(id);
        return ResponseEntity.noContent().build();
     }
